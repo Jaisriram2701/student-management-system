@@ -1,0 +1,39 @@
+{% extends 'main.html' %}
+{% load static %}
+
+{% block page_class %}trash-page{% endblock %}
+
+{% block content %}
+<center>
+    <h1>Trash Page</h1><br>
+
+    <table class="student-table">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Roll No</th>
+                <th>Email</th>
+                <th>Department</th>
+                <th>DOB</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            {% for i in data %}
+            <tr>
+                <td>{{ i.name }}</td>
+                <td>{{ i.roll_number }}</td>
+                <td>{{ i.email }}</td>
+                <td>{{ i.department }}</td>
+                <td>{{ i.dob }}</td>
+                <td>
+                    <a class="btn-restore" href="{% url 'restore' i.id %}">Restore</a> ||
+                    <a class="btn-delete" href="{% url 'permanent_delete' i.id %}">Delete Permanently</a>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</center>
+{% endblock %}

@@ -1,0 +1,43 @@
+{% extends 'main.html' %}
+{% load static %}
+
+
+{% block page_class %}home-page{% endblock %}
+
+{% block content %}
+<center>
+    <h1>Welcome to Student Management System (SMS)</h1><br>
+    
+    <a href="{% url 'trash' %}">Trash</a>
+    <br><br>
+
+    <table class="student-table">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Roll No</th>
+                <th>Email</th>
+                <th>Department</th>
+                <th>DOB</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            {% for i in data %}
+            <tr>
+                <td>{{ i.name }}</td>
+                <td>{{ i.roll_number }}</td>
+                <td>{{ i.email }}</td>
+                <td>{{ i.department }}</td>
+                <td>{{ i.dob }}</td>
+                <td>
+                    <a class="btn-delete" href="{% url 'delete' i.id %}">Delete</a> ||
+                    <a class="btn-update" href="{% url 'update' i.id %}">Update</a> 
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</center>
+{% endblock %}

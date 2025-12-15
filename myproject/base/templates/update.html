@@ -1,0 +1,40 @@
+{% extends 'main.html' %}
+
+{% block page_class %}update-page{% endblock %}
+
+{% block content %}
+<center>
+    <h1>This is update page</h1>
+
+    <form action="" method="POST" class="update-form">
+        {% csrf_token %}
+
+        <div class="form-row">
+            <label>Name:</label>
+            <input type="text" name="name" value="{{data.name}}">
+        </div>
+
+        <div class="form-row">
+            <label>Roll number:</label>
+            <input type="text" name="roll_number" value="{{data.roll_number}}">
+        </div>
+
+        <div class="form-row">
+            <label>Email:</label>
+            <input type="email" name="email" value="{{data.email}}">
+        </div>
+
+        <div class="form-row">
+            <label>Department:</label>
+            <input type="text" name="department" value="{{data.department}}">
+        </div>
+
+        <div class="form-row">
+            <label>DOB:</label>
+            <input type="date" name="dob" value="{{data.dob}}">
+        </div>
+
+        <button type="submit">Submit</button>
+    </form>
+</center>
+{% endblock %}

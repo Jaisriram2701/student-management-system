@@ -1,0 +1,23 @@
+{% extends 'main.html' %}
+{% load static %}
+{% block page_class %}add-student-page{% endblock %}
+{% block content %}
+<center>
+    <h1>Add the details of the students</h1>
+<form action="" method="POST">
+    {% csrf_token %}
+
+    <label for="name">Name:</label>
+    <input type="text" name="name" id="name"><br><br>
+    <label for="roll_number">Roll number:</label>
+    <input type="text" name="roll_number" id=""><br><br>
+    <label for="email">Email:</label>
+    <input type="email" name="email" id=""><br><br>
+    <label for="department">Department:</label>
+    <input type="text" name="department" id=""><br><br>
+    <label for="dob">DOB:</label>
+    <input type="date" name="dob" id=""><br><br>
+    <button type="submit">Submit</button>
+</form>
+</center>
+{% endblock %}

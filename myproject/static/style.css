@@ -1,0 +1,163 @@
+.home-page {
+  background-image: url("images/home_bg.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.about-page {
+  background-image: url("images/about1.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.add-student-page {
+  background-image: url("images/home_bg.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.trash-page {
+  background-image: url("images/trash.webp");
+  background-size:cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.update-page {
+  background-image: url("images/update1.jpg");
+  background-size:contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+footer {
+    font-size:10px ;
+    margin-top: auto;
+    text-align: center;
+    padding: 1px;
+    background: rgba(123, 184, 235, 0.7);
+}
+h1 {
+  display: inline-block;
+  background-color: #fbf8f8;  /* light gray */
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 20px;
+  color: #333;
+}
+
+
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 30px;
+  background-color: #0f68c1;
+  color: white;
+}
+
+.Logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+}
+
+.links {
+  display: flex;
+  gap: 20px;
+}
+
+.links a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.links a:hover {
+  text-decoration: underline;
+}
+
+.student-table {
+    width: 75%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background: #c6fd97;
+    border-radius: 10px;
+}
+
+.student-table th, 
+.student-table td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: center;
+}
+
+.student-table th {
+    background: #f2efef1d;
+    font-weight: bold;
+    
+}
+
+.student-table a {
+    margin: 0 5px;
+    text-decoration: none;
+    color: rgb(19, 71, 160);
+}
+.msg-box {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.msg {
+    display: inline-block;
+    background: #d4edda;
+    color: #155724;
+    padding: 8px 15px;
+    border-radius: 5px;
+    border: 1px solid #c3e6cb;
+    margin-bottom: 10px;
+}
+
+.msg-box:empty {
+    display: none;
+}
+.update-form {
+    width: 500px;
+    margin: 20px auto;
+}
+
+.form-row {
+    margin: 10px 0;
+    text-align: left;
+}
+
+.form-row label {
+    display: inline-block;
+    width: 150px;
+    font-weight: bold;
+}
+
+.form-row input {
+    width: 250px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.update-form button {
+    margin-top: 10px;
+    padding: 8px 20px;
+    background-color: #0f68c1;
+    color: white;
+}
+
